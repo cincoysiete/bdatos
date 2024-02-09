@@ -1,7 +1,6 @@
 <?php session_start(); 
 include("variables.php"); 
 include("constantes.php");
- 
 include("cincoysiete.css"); 
 
 ?>
@@ -86,7 +85,9 @@ echo '  <span class="textopequeno">'.$col[$_SESSION["col01"]]." + ".$col[$_SES
 <?php echo $labase[1]; ?>
 </td></td></table>
 </div>
-<br><br><br>
+<br>
+<!-- <br> -->
+<!-- <br> -->
 
 <?php
 
@@ -132,11 +133,6 @@ $keke=$keke.$trozo[$h]."~";
 }
 for ($t=0;$t<=count($col);$t++) {$lineamala=$lineamala.";";}
 $_SESSION["paficha"]=$keke;
-// if (strlen($linea)<=$lineamala){
-// $keke='<a href="ver.php?modi=-1&ficha='.$keke.'" title="Añadir registro"><img src="mas.png" width="25px"></a>';
-// } else {
-// $keke='<a href="ver.php?modi=1&ficha='.$keke.'" title="Ver ficha del registro"><img src="ojo.png" width="25px"></a>';
-// }
 
 // GENERA LOS DATOS DEL ARTICULO PARA VERLOS EN MODO FICHA
 $kiki="";
@@ -147,18 +143,10 @@ for ($f=0;$f<=count($col);$f++){
 $filtrando=explode(";",$lineo);
 
 if (trim(strip_tags($filtrando[$_SESSION["columna"]]))==trim($_SESSION["filtro"])){
-   // $ff=$f-1;
 
-   if ($sum[$f]=="si"){
-      // if (strip_tags($trozo[$ff])=="Gasto"){ 
-      //    $sumao[$f]=$sumao[$f]-$trozo[$f]; 
-      //    $haysuma=1;
-      // }
-      // if (strip_tags($trozo[$ff])=="Ingreso"){ 
+   if ($sum[$f]=="si" and $trozo[$f]>0){
          $sumao[$f]=$sumao[$f]+$trozo[$f]; 
          $haysuma=1;
-      // }
- 
 }
    if ($med[$f]=="si"){ $haymedia=1;}
 }
@@ -173,7 +161,6 @@ if (strpos($trozo[$f],".")) {} else {$trozo[$f]="blanco.png";}
 $trozo[$f]='<a href="'.$trozo[$f].'" title="Toca para ver imagen: '.$kikio[1].'">'.'<img src="'.$trozo[$f].'" width-max="'.$anchoimg.'" height="'.$altoimg.'">'.'</a>';
 } else {
 $imagiya="peque.png";
-// if (strlen($trozo[$f])>4) {$trozo[$f]='<a href="'.$trozo[$f].'">'.'<img src="'.$imagiya.'" width="20px"></a>';}
 if (strlen($trozo[$f])>4) {$trozo[$f]='<a href=mira.php?tip='.$tip[$f].'&colu='.$col[$f].'&esto='.$trozo[$f].' title="Toca para ver imagen: '.$kikio[1].'"><img src="'.$imagiya.'" width="20px"></a>';}
 }
 }
@@ -195,7 +182,6 @@ $troza[$f]='<a href="filtra.php?fitra='.$trozo[$f].'&coluna='.$f.'">'.$trozo[$f]
 // FILTRAMOS POR FECHA
 if (strtotime($trozo[$f])){
    $atrozao=substr($trozo[$f],0,5); //AÑO
-   // $atrozao=substr($trozo[$f],4,4); //MES
    $troza[$f]='<a href="filtra.php?fitra='.$atrozao.'&coluna='.$f.'">'.$trozo[$f].'</a>';
 }
 
@@ -204,7 +190,6 @@ $numfar='<a href="filtra.php?fitra='.$numfor.'">'.$numfor.'</a>';
 $cachete=$trozo[$f];
 if ($tip[$f]=="url"){$trozo[$f]='<a href="'.$trozo[$f].'" target="_new">'.$trozo[$f].'</a>';}
 if ($tip[$f]=="textarea"){$trozo[$f]='<a href="mira.php?tip='.$tip[$f].'&colu='.$col[$f].'&esto='.$trozo[$f].'" title="Toca para ver el texto" >'.substr($trozo[$f],0,30).$lepa.'</a>';}
-// if ($tip[$f]=="image"){$trozo[$f]='<a href=mira.php?esto="'.$trozo[$f].'">'.$trozo[$f].'</a>';}
 
 if ($tip[$f]=="text"){$trozo[$f]="<div title='Toca para filtrar' class='izq'>".$troza[$f]."</div>";}
 
@@ -249,8 +234,6 @@ if (trim(strip_tags($filtrando[$_SESSION["columna"]]))==trim($_SESSION["filtro"]
 echo '<TR class="modo2">';
 echo '<TH class="modo2">';
 echo str_replace(";","<TH class='modo2'>",$linea)."";
-// echo '</TD>';
-// echo '</TR><TR>';
 $contando++;
 }
 $conta++;
@@ -296,14 +279,12 @@ $kiki=$kiki.$linea.";";
 $kiki = substr($kiki, 0, -1);
 echo '</TR><TR class="modo2">';
 echo '<TH class="modo2">';
-// echo '<TH class="modo2">';
 echo str_replace(";","</TD><TH class='modo2'>",$kiki);
 echo '</TD>';
 echo '</TR><TR>';
 }
 
 $contando=$contando-2;
-// echo $contando;
 echo '</TR><TR class="modo2">';
 echo '<TH class="modo2">';
 echo str_replace(";","</TD><TH class='modo2'>",$contando." registros");
@@ -352,7 +333,6 @@ function busca (str) {
   alert ("Opera no soporta busqueda")
   return;
  }
-//  if (!strFound) alert ("Cadena '"+str+"' no fue Encontrada")
  return;
 }
 </script>
