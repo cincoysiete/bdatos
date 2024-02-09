@@ -1,0 +1,1 @@
+{"short_name": "Base de datos","name": "Base de datos","description": "Base de datos","icons": [{"src": "milogo.png","type": "image/png","sizes": "192x192"},{"src": "milogo.png","type": "image/png","sizes": "512x512"}],"start_url": "https://cartaconqr.com/bdatos/index.php","background_color": "#FFFFFF","display": "minimal-ui","scope": "/bdatos","theme_color": "#FFFFFF"}
