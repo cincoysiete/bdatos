@@ -2,21 +2,30 @@
 Base de datos configurable
 
 ## Crear base
-
-Especifica el nombre de la base y el número de decimales que deben tener los campos numéricos.
+Debes el nombre de la base y el número de decimales que deben tener los campos numéricos.
 Tienes disponibles hasta 20 campos para crear la base. En cada uno de los campos podrás escribir el nombre del campo, que aparecerá en la base, el tipo de campo y si es numérico, si quieres que lo sume y haga la media.
 También puedes añadir un comentario que aparecerá junto al nombre de la base de datos.
 
+Los tipos de registros son:
+- text. texto
+- date. fecha
+- time. hora
+- number. número
+- textarea. área
+- image. imagen
+- url. url
+- doc. documento
+
 ## Importar base
-1.  Crea una base de datos con los campos y características de la base que necesitas importar.
-2.  Al mostrar la vista de tabla de la base verás que está vacía y abajo aparece el icono de importar
-3.  Importa la base en el formato especificado más abajo
+1. Crea una base de datos en formato .csv con los campos y características de la base que necesitas importar.
+2. Al mostrar la vista de tabla de la base verás que está vacía y abajo aparece el icono de importar
+3. Importa la base en el formato especificado más abajo
 
 Ejemplo
 Si defines la base de datos creada con estos datos:
 
-| FECHA | CONCEPTO | COSTE | NOTAS | FOTO |
-|:------|:---------|:------|:------|:-----|
+|   FECHA   |   CONCEPTO   |   COSTE   |   NOTAS   |   FOTO   |
+|:-----|:-----|:-----|:-----|:-----|
 
 La base de datos a importar deberá ser un archivo .csv y tener esta estructura:
 FECHA;CONCEPTO;COSTE;NOTAS;FOTO
@@ -24,29 +33,30 @@ FECHA;CONCEPTO;COSTE;NOTAS;FOTO
 2003-07-18;segun;24;kuku
 2023-01-24;terce;77
 
-``` mermaid
-graph TD
 
-Crear_base --> Importar_base
-```
-
-## Vista de en modo tabla
-Se trata de la vista por defecto de la base de datos. Tocando en cualquier campo aparecerá la ficha completa del registro.
+## Vista en modo tabla
+Se trata de la vista por defecto de la base de datos. Tocando en el ojo aparecerá la ficha completa del registro.
 
 Para ordenar la base de datos toca sobre el nombre del campo por el que ordenar .
 
-Añadir registros: 
-Mostrar/ocultar imágenes: 
-Descargar base en formato .csv: 
-Buscar registro: 
+Aquí puedes:
+- Añadir registros
+- Mostrar/ocultar imágenes
+- Descargar base en formato .csv
+- Buscar registro
+
+**Ordenar registros**. Para ordenar los registros alfabéticamente, en orden ascendente y descendente alternativamente solo basta con tocar el encabezado de la columna.
+
+**Generar gráfico**. Para generar un gráfico es necesario seleccionar dos columnas o bien la misma columna dos veces tocando en la gráfica que hay en el encabezado. 
+Una vez seleccionadas las columnas solo habrá que tocar en la gráfica del header.
+
 
 ## Vista en modo ficha
+- Capturar registro. El registro se descarga como imagen
+- Modificar registro. Deberás tocar en el candado para desbloquear el registro
+- Avanzar/retroceder registro
 
-Descargar registro: El registro se descarga como imagen.
-Modificar registro: 
-Avanzar/retroceder registro: 
-
-------------------------------------------------------------------------
+---
 
 ## Estructura y archivos de la base
 
@@ -56,8 +66,7 @@ base.csv
 3;2023-01-24;terce;77;;
 
 base.php
-
-``` php
+````php
 <?php
 
 $mibase="bases/Combustible";
@@ -85,11 +94,10 @@ $sum[4]="";
 $med[4]="";
 
 ?>
-```
+````
 
 ## constantes.php
-
-``` php
+````php
 <?php
 $nom="Base de datos";       // NOMBRE DE LA PLICACION
 $log="favicon.png";         // ICONO
@@ -100,4 +108,4 @@ $imgtabla="";               // CON si, MUESTRA LAS FOTOS EN LA TABLA DE R
 $numcampos=20;              // NUMERO DE CAMPOS MÁXIMO
 $colo="#bbd7cf";
 ?>
-```
+````
