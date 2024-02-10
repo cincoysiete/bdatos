@@ -1,16 +1,15 @@
-<?php session_start(); 
+<?php 
+session_start(); 
 include("variables.php"); 
 include("constantes.php");
 include("cincoysiete.css"); 
-
 ?>
 
 <html lang="es">
 <link rel="manifest" href="manifest.json">
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <link rel="icon" type="image/png" href="<?php echo $log; ?>" />
-<?php header('Content-Type: text/html; charset=UTF-8'); ?>
-
+<meta charset="UTF-8">
 
 <title><?php echo $nom; ?></title>
 
@@ -86,8 +85,8 @@ echo '  <span class="textopequeno">'.$col[$_SESSION["col01"]]." + ".$col[$_SES
 </td></td></table>
 </div>
 <br>
-<!-- <br> -->
-<!-- <br> -->
+<br>
+<br>
 
 <?php
 
@@ -100,12 +99,10 @@ $conta=0;
 $contando=1;
 
 // GENERA LOS ENCABEZADOS DE LAS COLUMNAS
-// echo '<TH>'.'<center>VER</center>'.'</TD>';
 for ($k=0;$k<=count($col);$k++){
 if ($k>0){
    echo '<TH>'.'<center><a href="ordena.php?qwer='.$k.'" title="Toca para ordenar la tabla por este campo">'.$col[$k].'</a><br>';
 
-// echo '<a href="graficasuma.php?qwer='.$k.'&nomcol='.$col[$k].'" title="Toca para ver gráfica"><img src="crecimiento.png" width="20px"></a>';
 echo '<a href="quecolumna.php?qwer='.$k.'&nomcol='.$col[$k].'" title="Toca dos columnas para crear gráfica"><img src="crecimiento.png" width="20px"></a>';
 
 echo '</center>'.'</TD>';

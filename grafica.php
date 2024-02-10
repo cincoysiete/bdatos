@@ -11,7 +11,7 @@ include("cincoysiete.css");
 <link rel="manifest" href="manifest.json">
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <link rel="icon" type="image/png" href="<?php echo $log; ?>" />
-<?php header('Content-Type: text/html; charset=UTF-8'); ?>
+<meta charset="UTF-8">
 
 
 <title><?php echo $nom; ?></title>
@@ -68,6 +68,7 @@ if ($_SESSION["filtro"]!=""){
 </td></td></table>
 </div>
 <br><br><br>
+<center>
 <div id="graficaContainer" style="width: 100%; height: 80vh;">
         <canvas id="myChart"></canvas>
     </div>

@@ -1,34 +1,43 @@
 <?php
 
-$mibase="bases/Combustible";
-$deci="2";
-$come="Gasto de combustible 2023";
+$mibase="bases/Pelis";
+$deci="0";
+$come="Películas vistas";
 
-$col[1]="Fecha";
-$tip[1]="date";
+$col[1]="Título";
+$tip[1]="text";
 $sum[1]="";
 $med[1]="";
 
-$col[2]="Litros";
-$tip[2]="number";
+$col[2]="Valoración";
+$tip[2]="text";
 $sum[2]="si";
-$med[2]="si";
+$med[2]="";
 
-$col[3]="Importe";
-$tip[3]="number";
-$sum[3]="si";
-$med[3]="si";
+$col[3]="Actores";
+$tip[3]="textarea";
+$sum[3]="";
+$med[3]="";
 
-$col[4]="Vehiculo";
-$tip[4]="text";
+$col[4]="Mi impresión";
+$tip[4]="textarea";
 $sum[4]="";
 $med[4]="";
 
+$col[5]="Fuente";
+$tip[5]="text";
+$sum[5]="";
+$med[5]="";
 
+$col[6]="Género";
+$tip[6]="textarea";
+$sum[6]="";
+$med[6]="";
 
-
-
-
+$col[7]="Fecha";
+$tip[7]="text";
+$sum[7]="";
+$med[7]="";
 
 
 ?>
