@@ -15,6 +15,7 @@ $linea.='$col['.$f.']="'.$_POST["nom$f"].'";'.PHP_EOL;
 $linea.='$tip['.$f.']="'.$_POST["tipo$f"].'";'.PHP_EOL;
 $linea.='$sum['.$f.']="'.$_POST["suma$f"].'";'.PHP_EOL;
 $linea.='$med['.$f.']="'.$_POST["media$f"].'";'.PHP_EOL;
+// $linea.='$des['.$f.']="'.$_POST["des$f"].'";'.PHP_EOL;
 }
 $linea.=PHP_EOL;
 }

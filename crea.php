@@ -61,6 +61,7 @@ echo "CAMPO ".$f;
 <option value="image">imagen</option>
 <option value="url">url</option>
 <option value="doc">documento</option>
+<!-- <option value="doc">desplegable</option> -->
 </select>
 
 <select name="suma<?php echo $f; ?>" title="Selecciona SI si quieres que se sumen los valores de esta columna">
@@ -72,6 +73,10 @@ echo "CAMPO ".$f;
 <option value="">Media</option>
 <option value="si">Si</option>
 </select>
+
+<!-- <textarea placeholder="valores para desplegable" rows="10"  name="des<?php echo $f; ?>" title="Añade, separados por comas, los valores que deben aparecer en el desplegable"></textarea> -->
+
+
 <br>
 <br>
 <?php

@@ -1,43 +1,62 @@
 <?php
+// PERSONALIZACION
 
-$mibase="bases/Pelis";
-$deci="0";
-$come="Películas vistas";
+$imgtabla="";                       // CON si, MUESTRA LAS ADJS EN LA TABLA DE REGISTROS
+$mibase="Compras casa";                   // NOMBRE DE LA BASE DE DATOS SIN EXTENSION
+$deci="2";                          // NUMERO DE DECIMALES EN CAMPOS NUMERICOS
+$come="Gastos de compras domésticas";
 
-$col[1]="Título";
-$tip[1]="text";
-$sum[1]="";
-$med[1]="";
+// NO MODIFICAR
+$mibase="bases/".$mibase;
 
-$col[2]="Valoración";
+// DEFINICION DE TABLA
+// ENCABEZADO Y NOMBRE DE LOS CAMPOS
+$col[1]="FECHA";
+$col[2]="CONCEPTO";
+$col[3]="IMPORTE";
+$col[4]="NOTAS";
+$col[5]="FOTO 1";
+$col[6]="FOTO 2";
+$col[7]="FOTO 3";
+$col[8]="FOTO 4";
+$col[9]="FOTO 5";
+$col[10]="FOTO 6";
+
+// TIPOS DE CAMPOS
+$tip[1]="date";
 $tip[2]="text";
-$sum[2]="si";
-$med[2]="";
-
-$col[3]="Actores";
-$tip[3]="textarea";
-$sum[3]="";
-$med[3]="";
-
-$col[4]="Mi impresión";
+$tip[3]="number";
 $tip[4]="textarea";
+$tip[5]="image";
+$tip[6]="image";
+$tip[7]="image";
+$tip[8]="image";
+$tip[9]="image";
+$tip[10]="image";
+
+// INDICA SI HACER SUMA DE LA COLUMNA
+$sum[1]="";
+$sum[2]="";
+$sum[3]="si";
 $sum[4]="";
-$med[4]="";
-
-$col[5]="Fuente";
-$tip[5]="text";
 $sum[5]="";
-$med[5]="";
-
-$col[6]="Género";
-$tip[6]="textarea";
 $sum[6]="";
-$med[6]="";
-
-$col[7]="Fecha";
-$tip[7]="text";
 $sum[7]="";
+$sum[8]="";
+$sum[9]="";
+$sum[10]="";
+
+// INDICA SI HAY QUE HACER LA MEDIA DE LOS VALORES DE LA COLUMNA
+$med[1]="";
+$med[2]="";
+$med[3]="si";
+$med[4]="";
+$med[5]="";
+$med[6]="";
 $med[7]="";
+$med[8]="";
+$med[9]="";
+$med[10]="";
 
 
 ?>

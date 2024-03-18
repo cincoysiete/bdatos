@@ -66,6 +66,7 @@ $pete=$f+count($col)+1;
 echo '<input class="input-field" type="file" placeholder="'.$kaka[$f].'" name="'.$f.'" value="'.$kaka[$f].'"'.$siosi.'>'; 
 echo '<input type="text" placeholder="'.$col[$f].'" name="'.$pete.'" value="'.$kaka[$f].'" '.$siosi.'> ';
 echo "</td><td align='center'>";
+// echo '<img src="'.$kaka[$f].'" width="150px">  ';
 echo '<button class="button2" onclick="return confirmar1();"><a href="quitaimagen.php?qwei='.$kaka[0].'~'.$kaka[$f].'  ">Eliminar imagen</a></button>';
 echo "</td></td></table><hr>";
 }

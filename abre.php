@@ -9,7 +9,7 @@ include("cincoysiete.css");
 <link rel="manifest" href="manifest.json">
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <link rel="icon" type="image/png" href="favicon.png" />
-<meta charset="UTF-8">
+<?php //header('Content-Type: text/html; charset=UTF-8'); ?>
 
 
 <title><?php echo $nom; ?></title>
@@ -87,6 +87,8 @@ while ($elemento = readdir($dir)) {
 <?php echo $nom; ?>
 </td><td align='right' width="10%">
 <a href="eliminabase.php" title="Eliminar base de datos"><img src="eliminabase.png" width="30px"></a>
+</td><td align='right' width="10%">
+<a href="muestrabases.php" title="Modificar base de datos"><img src="muestrabases.png" width="30px"></a>
 </td><td align='right' width="10%">
 <a href="crea.php" title="Crear nueva base de datos"><img src="creabase.png" width="30px"></a>
 </td></td></table>
