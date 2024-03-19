@@ -1,4 +1,4 @@
-<?php session_start(); 
+<?php include("identifica.php"); 
 include("constantes.php"); 
 $_SESSION["editar"]=$_SESSION["editar"]*-1;
 ?>

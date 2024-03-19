@@ -4,7 +4,7 @@
 <title><?php echo $nom; ?></title>
 
 <?php
-session_start(); 
+include("identifica.php"); 
 include("variables.php"); 
 include("constantes.php");
  

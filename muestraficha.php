@@ -4,7 +4,7 @@
 <title><?php echo $nom; ?></title>
 
 <?php
-session_start(); 
+include("identifica.php"); 
 include("cincoysiete.css"); 
 // $cauno=explode("~",$_GET["ficha"]);
 $kaka=explode("~",$_GET["ficha"]);

@@ -1,4 +1,4 @@
-<?php session_start(); 
+<?php include("identifica.php"); 
 include("variables.php"); 
 include("cincoysiete.css"); 
 
