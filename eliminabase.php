@@ -94,7 +94,7 @@ $dir = opendir("bases");
 <br>
 <table width='100%' border='0' bgcolor="red">
 <tr><td align='left' width="10%">
-<a href="abre.php"><img src="volver.png" width="30px"></a>
+<a href="inicio.php"><img src="volver.png" width="30px"></a>
 </td><td align='center'>
 <?php echo "ENVIAR A PAPELERA"; ?>
 </td><td align='right' width="10%">
@@ -109,7 +109,7 @@ listarArchivos( "bases",$cuantosarchivos,$archives );
 <br><br><br>
 <table width='100%' border='0' bgcolor="GREEN">
 <tr><td align='left' width="10%">
-<a href="abre.php"><img src="volver.png" width="30px"></a>
+<a href="inicio.php"><img src="volver.png" width="30px"></a>
 </td><td align='center'>
 <?php echo "PAPELERA";?>
 </td><td align='right' width="10%">

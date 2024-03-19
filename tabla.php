@@ -54,7 +54,7 @@ $labase=explode("/",$mibase);
 <br>
 <table width='100%' border='0' bgcolor="<?php echo $colo; ?>">
 <tr><td align='left' width='10%'>
-<a href="abre.php"><img src="volver.png" width="30px"></a>
+<a href="inicio.php"><img src="volver.png" width="30px"></a>
 </td><td align='center' width='10%'>
 <input class="button3" name="t1" value="" />
 </td><td>

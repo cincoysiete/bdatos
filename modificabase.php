@@ -26,9 +26,9 @@ $_SESSION["nombrebase"]=$kaka1[1];
 <center>
 <table width='86%' border='0' bgcolor="<?php echo $colo; ?>">
 <tr><td align='left' width="10%">
-<a href="abre.php"><img src="volver.png" width="30px"></a>
+<a href="inicio.php"><img src="volver.png" width="30px"></a>
 <!-- <tr><td align='center' width="10%">
-<a href="abre.php"><button class="button5"><</button></a> -->
+<a href="inicio.php"><button class="button5"><</button></a> -->
 </td><td align='center'>
 Modificar base de datos
 </td></td></table>
