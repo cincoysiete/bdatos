@@ -26,6 +26,26 @@ $arx=fopen("bases/".$_POST["nombre"].".php","w") or die("Problemas en la creacio
 fputs($arx,$nuevabase);
 fclose($arx);
 
+// AÑADE ; EN CASO DE SER NECESARIO
+$ero=fopen('bases/'.$_POST["nombre"].".csv","r") or die("Error en base de datos");
+while (!feof($ero)) 
+{
+$linea=fgets($ero);
+
+$pei=explode(";",$linea);
+$et=21-count($pei);
+if ($et>2 and strlen($linea>1)) {for ($rt=1;$rt<=$et;$rt++) {$linea=rtrim($linea).";";}}
+
+if ($linea!=";;") {$koko=$koko.$linea;}
+$contando++;
+}
+fclose($ero);
+$arx=fopen('bases/'.$_POST["nombre"].".csv","w") or die("Problemas en la creacion ");
+fputs($arx,$koko);
+fclose($arx);
+
+
+
 // SI HEMOS CAMBIADO EL NOMBRE DE LA BASE DE DATOS ACTUALIZA LOS ARCHIVOS PHP Y CSV
 if ($_SESSION["nombrebase"]!=$_POST["nombre"]){
     $kake=explode(".",$_SESSION["nombrebase"]);

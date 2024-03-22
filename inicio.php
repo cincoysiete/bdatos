@@ -1,7 +1,6 @@
 <?php include("identifica.php"); 
 
 include("constantes.php"); 
-$_SESSION["tamtxt"]=12;
 include("cincoysiete.css"); 
 
 ?>

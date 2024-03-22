@@ -28,6 +28,7 @@ fputs($arx,$nuevabase);
 fclose($arx);
 
 // CREA EL ARCHIVO DE BASE DE DATOS
+$nuevabase=$_SESSION["comitas"];
 $nuevabase="";
 $arx=fopen("bases/".$_POST["nombre"].".csv","w") or die("Problemas en la creacion ");
 fputs($arx,$nuevabase);

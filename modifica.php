@@ -9,7 +9,6 @@ include("cincoysiete.css");
 
 <?php
 
-// exit("-".$_POST["eliminar"]."-");
 // ELIMINA EL REGISTRO
 if ($_POST["eliminar"]=="on"){
 
@@ -18,7 +17,6 @@ $keke="";
 $ero=fopen($mibase.".csv","r") or die("Error en base de datos");
 for ($f=1;$f<=$_SESSION["cuantosregistros"];$f++) {
 $linea=fgets($ero);
-// echo $linea."<br>";
 if ($f!=$_SESSION["contadora"]){$keke=$keke.$linea;}
 }
 fclose($ero);
@@ -29,8 +27,6 @@ $arx=fopen($mibase.".csv","w") or die("Problemas en la creacion ");
 fputs($arx,$keke);
 fclose($arx);
 echo '<script>location.href="tabla.php"</script>';
-// echo "<br><br><br>";
-// echo $keke;
 exit();
 }
 
@@ -38,8 +34,6 @@ exit();
 if ($_SESSION["puedomodificar"]==-1){$_POST[0]=9999999;}
 
 // RECORRO LOS CAMPOS DEL REGISTRO QUE HA LLEGADO DESDE LA TABLA POR $_POST
-// echo count($col)."<br><br>";
-
 $kiki="";
 for ($f=0;$f<=count($col);$f++){
 $pea=$_POST[$f];
@@ -63,8 +57,13 @@ $pea=rtrim($_POST[$f+count($col)+1]);
 }
 
 // AQUI ESTA EL REGISTRO NUEVO O MODIFICADO
+
 $kiki=$kiki.$pea.";";
 }
+$pei=explode(";",$kiki);
+$et=21-count($pei);
+if ($et>1) {for ($rt=1;$rt<=$et;$rt++) {$kiki=$kiki.";";}}
+
 
 // echo $kiki;
 // echo "<br>";
@@ -81,13 +80,16 @@ $ero=fopen($mibase.".csv","r") or die("Error en base de datos");
 while (!feof($ero)) 
 {
 $linea=fgets($ero);
-$linedo=explode(";",$linea);
-if (count($linedo)<=20){$linea=trim($linea).";;;;;;;;;;;;;;;;;;;;".PHP_EOL;}
+
+$pei=explode(";",$linea);
+$et=21-count($pei);
+if ($et>1 and strlen($linea>1)) {for ($rt=1;$rt<=$et;$rt++) {$linea=$linea.";";}}
+
 if ($conta==trim($kaka[0])){$koko=$koko.$kiki.PHP_EOL;} else {$koko=$koko.$linea;}
 $conta++;
 }
 fclose($ero);
-
+// exit();
 } else {
 
 // SI ESTAMOS CREANDO UN REGISTRO LO AÑADIMOS AL FINAL DE LA BASE DE DATOS

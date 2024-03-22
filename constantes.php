@@ -7,5 +7,6 @@ $imgtabla="";               // CON si, MUESTRA LAS FOTOS EN LA TABLA DE REGISTRO
 $numcampos=20;              // NUMERO DE CAMPOS MÁXIMO
 $colo="#bbd7cf";          // COLOR DE LA BARRA SUPERIOR DE LA APLICACION
 $tabla="#FAF3DD";         // COLOR DE LA CABECERA DE LA TABLA
-
+$_SESSION["tamtxt"]=12;
+$_SESSION["comitas"]=";;;;;;;;;;;;;;;;;;;;;;;;;";
 ?>
